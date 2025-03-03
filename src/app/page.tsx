@@ -6,6 +6,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div>
+<<<<<<< Updated upstream
       <SignedOut>
         <SignInButton mode="modal">
           <Button>Sign In</Button>
@@ -17,6 +18,9 @@ export default function Home() {
       </SignedIn>
       <ModeToggle/>
       <Button variant={"secondary"}>Click Me</Button>
+=======
+      <h1>Home page content</h1>
+>>>>>>> Stashed changes
     </div>
   );
 }
