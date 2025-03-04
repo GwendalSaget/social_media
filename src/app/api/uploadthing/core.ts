@@ -8,7 +8,7 @@ export const ourFileRouter = {
   postImage: f({
     image: {
       maxFileSize: "4MB",
-      maxFileCount: 1,
+      maxFileCount: 2,
     },
   })
     .middleware(async () => {
@@ -21,7 +21,7 @@ export const ourFileRouter = {
     })
     .onUploadComplete(async ({ metadata, file }) => {
       try {
-        return { fileUrl: file.url };
+        return { fileUrl: file.ufsUrl };
       } catch (error) {
         console.error("Error in onUploadComplete:", error);
         throw error;
